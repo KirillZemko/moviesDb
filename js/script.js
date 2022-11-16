@@ -8,12 +8,12 @@ const personalMovieDB = {
     privat: false
 };
 
-let lastViewedmovie = prompt('Один из последних просмотренных фильмов?', 'Logan'),
+const lastViewedmovie = prompt('Один из последних просмотренных фильмов?', 'Logan'),
     rateLastViewedMovie = +prompt('На сколько оцените его?', '8.2'),
     lastViewedmovie2 = prompt('Один из последних просмотренных фильмов?', 'Logan'),
     rateLastViewedMovie2 = +prompt('На сколько оцените его?', '8.2');
 
-personalMovieDB.movies.lastViewedmovie = rateLastViewedMovie;
+personalMovieDB.movies[lastViewedmovie] = rateLastViewedMovie;
 personalMovieDB.movies[lastViewedmovie2] = rateLastViewedMovie2;    
 
 console.log(personalMovieDB.movies);
