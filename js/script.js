@@ -9,14 +9,6 @@
 
 let numberOfFilms;
 
-const personalMovieDB = {
-  count: numberOfFilms,
-  movies: {},
-  actors: {},
-  genres: [],
-  privat: false
-};
-
 function start() {
   numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
 
@@ -27,6 +19,14 @@ function start() {
 }
 
 start();
+
+const personalMovieDB = {
+  count: numberOfFilms,
+  movies: {},
+  actors: {},
+  genres: [],
+  privat: false
+};
 
 function rememberMyFilms() {
   for (let i = 1; i <= numberOfFilms; i++) {
