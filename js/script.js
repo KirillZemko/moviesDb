@@ -1,12 +1,3 @@
-// 2) Создать функцию showMyDB, которая будет проверять свойство privat. Если стоит в позиции
-// false - выводит в консоль главный объект программы
-
-// 3) Создать функцию writeYourGenres в которой пользователь будет 3 раза отвечать на вопрос
-// "Ваш любимый жанр под номером ${номер по порядку}". Каждый ответ записывается в массив данных
-// genres
-
-// P.S. Функции вызывать не обязательно*/
-
 let numberOfFilms;
 
 function start() {
@@ -30,7 +21,7 @@ const personalMovieDB = {
 
 function rememberMyFilms() {
   for (let i = 1; i <= numberOfFilms; i++) {
-    const lastViewedMovie = prompt('Один из последних просмотренных фильмов?', ''),
+    const lastViewedMovie = prompt('Один из последних просмотренных фильмов?', '').trim(),
           rateLastViewedMovie = +prompt('На сколько оцените его?', '');
 
    if (lastViewedMovie != '' && rateLastViewedMovie != '' || (lastViewedMovie != null && rateLastViewedMovie != null && lastViewedMovie.length > 50)) {
