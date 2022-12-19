@@ -19,14 +19,14 @@ const personalMovieDB = {
   genres: [],
   privat: false,
   start: function() {
-    numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
+    personalMovieDB.count = +prompt('Сколько фильмов вы уже посмотрели?', '');
 
-    while (numberOfFilms == '' || numberOfFilms == null || isNaN(numberOfFilms)) {
-      numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
+    while (personalMovieDB.count == '' || personalMovieDB.count == null || isNaN(personalMovieDB.count)) {
+      personalMovieDB.count = +prompt('Сколько фильмов вы уже посмотрели?', '');
     }
   },
   rememberMyFilms: function() {
-    for (let i = 1; i <= numberOfFilms; i++) {
+    for (let i = 1; i <= personalMovieDB.count; i++) {
       const lastViewedMovie = prompt('Один из последних просмотренных фильмов?', '').trim(),
             rateLastViewedMovie = +prompt('На сколько оцените его?', '');
 
