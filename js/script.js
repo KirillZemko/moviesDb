@@ -10,10 +10,8 @@
 // при помощи метода forEach вывести в консоль сообщения в таком виде:
 // "Любимый жанр #(номер по порядку, начиная с 1) - это (название из массива)"*/
 
-let numberOfFilms;
-
 const personalMovieDB = {
-  count: numberOfFilms,
+  count: 0,
   movies: {},
   actors: {},
   genres: [],
@@ -33,11 +31,10 @@ const personalMovieDB = {
       if (lastViewedMovie != '' && rateLastViewedMovie != '' || (lastViewedMovie != null && rateLastViewedMovie != null && lastViewedMovie.length > 50)) {
         personalMovieDB.movies[lastViewedMovie] = rateLastViewedMovie;
 
-        console.log('done');
       } else {
         i--;
 
-        console.log('error');
+        console.log('Недопустимое введенное значение!');
       }
     }
   },
